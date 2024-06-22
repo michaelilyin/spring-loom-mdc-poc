@@ -4,7 +4,8 @@
             <pattern>[%t] %5p %c{1} [req:%X{requestId}] - %m %n</pattern>
         </encoder>
     </appender>
+    <appender name="noop" class="ch.qos.logback.core.helpers.NOPAppender"/>
     <root level="INFO">
-        <appender-ref ref="stdout" />
+        <appender-ref ref="noop"/>
     </root>
 </configuration>

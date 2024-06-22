@@ -10,12 +10,11 @@ import org.springframework.web.client.RestTemplate;
 import static org.example.Commons.prepareRequest;
 
 @BenchmarkMode(Mode.Throughput)
-@Warmup(iterations = 1, time = 1)
-@Measurement(iterations = 1, batchSize = 1, time = 1)
-@Fork(value = 1)
+@Warmup(iterations = 2, time = 30)
+@Measurement(iterations = 5, batchSize = 5, time = 120)
+@Fork(value = 2)
 @Threads(100)
 @State(Scope.Benchmark)
-@CompilerControl(CompilerControl.Mode.BREAK)
 public class ScopedValuesBenchmark {
     private static final RestTemplate client = new RestTemplate();
     private ConfigurableApplicationContext applicationContext;

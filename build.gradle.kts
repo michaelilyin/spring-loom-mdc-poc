@@ -97,8 +97,8 @@ jmh {
         jvmArgs.get() + setOf(
             "--enable-preview",
             "-XX:+UnlockExperimentalVMOptions",
-            "-Xms8G",
-            "-Xmx8G",
+            "-Xms4G",
+            "-Xmx4G",
             "-XX:+AlwaysPreTouch",
 //            "-XX:TieredStopAtLevel=1",
 //            "-Dspring.output.ansi.enabled=always",
@@ -109,6 +109,7 @@ jmh {
 //            "-Dmanagement.endpoints.jmx.exposure.include=*",
         )
     )
+    resultFormat.set("CSV")
 //    forceGC.set(true)
     profilers.set(
         listOf("gc")
