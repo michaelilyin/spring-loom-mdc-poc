@@ -1,0 +1,1 @@
+org.springframework.boot.SpringApplicationRunListener=org.example.loom.support.security.SecurityContextHolderOverride
